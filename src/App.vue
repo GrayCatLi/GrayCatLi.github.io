@@ -4,7 +4,7 @@
 </template>
 
 <script setup>
-import navbar from "./components/navbar/index.vue";
+import navbar from './components/navbar/index.vue'
 </script>
 
 <style lang="less" scoped>
@@ -15,6 +15,6 @@ import navbar from "./components/navbar/index.vue";
   z-index: 2;
 }
 .view-container {
-  margin: 120px 280px;
+  margin: 120px 450px;
 }
 </style>
