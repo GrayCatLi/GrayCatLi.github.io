@@ -15,6 +15,11 @@ const routes = [
         path:'/aboutweb',
         name:'aboutweb',
         component: () => import('../pages/aboutWeb/index.vue')
+    },
+    {
+        path:'/test',
+        name:'test',
+        component: () => import('../pages/test/index.vue')
     }
 ]
 

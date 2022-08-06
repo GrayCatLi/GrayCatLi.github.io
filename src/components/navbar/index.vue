@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="navbar" :class="toggleNav">
     <router-link to="/" class="nav-left">
       <div class="logo"></div>
       <div class="title">HaoYu Li's Home</div>
@@ -11,22 +11,35 @@
       <router-link to="/aboutweb">
         <span>关于本站</span>
       </router-link>
+      <!-- <router-link to="/test">
+        <span>test</span>
+      </router-link> -->
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from "@vue/reactivity";
+
+let toggleNav = ref("");
+
+window.onscroll = () => {
+  if (window.scrollY > 30) {
+    toggleNav.value = "active";
+  } else toggleNav.value = "";
+};
 </script>
 
 <style lang="less" scoped>
 .navbar {
+  background-color: rgba(255, 255, 255, 0.1);
   height: 50px;
   width: 100vw;
-  line-height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
+  transition: 1s;
 
   .nav-left {
     height: 100%;
@@ -69,5 +82,8 @@
     font-size: 14px;
     color: #ccc;
   }
+}
+.navbar.active {
+  background: rgba(0, 0, 0, 0.3);
 }
 </style>

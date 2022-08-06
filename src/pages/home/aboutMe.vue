@@ -16,7 +16,7 @@
 
 <style lang="less" scoped>
 .about-me {
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

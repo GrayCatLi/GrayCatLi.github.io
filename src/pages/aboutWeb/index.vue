@@ -42,6 +42,9 @@ export default {};
 
 <style lang="less" scoped>
 .container {
+  background-image: url(../../assets/bg2.png);
+  background-size: cover;
+  height: 100vh;
   .avatar {
     background-image: url(https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f44f.svg);
     background-size: cover;
@@ -50,21 +53,6 @@ export default {};
     border-radius: 5px;
     margin-bottom: 40px;
     transition: all 0.5s ease-out;
-  }
-  .avatar:hover {
-    transform: rotate(-30deg);
-  }
-  p {
-    margin: 20px 0;
-  }
-  hr {
-    margin: 50px 0;
-  }
-  a {
-    color: rgb(16, 226, 234);
-  }
-  h1 {
-    font-size: 50px;
   }
 }
 </style>

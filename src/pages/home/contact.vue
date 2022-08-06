@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <h2 class="middle-title">| 与我联系</h2>
+    <h2>| 与我联系</h2>
     <ul>
       <li>邮箱：lhyforwork@163.com</li>
       <li>微信：liHaoYu_66</li>
@@ -16,6 +16,9 @@
 <script setup></script>
 
 <style lang="less" scoped>
+h2 {
+  margin-bottom: 20px;
+}
 ul {
   padding-left: 30px;
   li {
