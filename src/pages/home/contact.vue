@@ -25,7 +25,7 @@ ul {
     padding: 15px 0;
     a {
       color: #ccc;
-      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }

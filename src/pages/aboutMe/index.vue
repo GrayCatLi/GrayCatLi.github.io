@@ -1,9 +1,5 @@
 <template>
   <div class="container">
-    <div class="bg1">
-      <div class="avatar"></div>
-      <div class="comment">一名追逐创意的前端应用开发者</div>
-    </div>
     <div class="image-container1 card">
       <img src="../../assets/cat.jpg" class="img-cat" />
       <div class="text-container">
@@ -35,10 +31,10 @@
     <div class="img-container3 card">
       <img src="../../assets/img2.png" class="img2" />
       <div class="text-container">
-        <h3>
+        <p>
           除了编程，我最大的爱好是🏀 <br />
           祝贺库里所带领的勇士队夺得2022年NBA总冠军！
-        </h3>
+        </p>
       </div>
     </div>
   </div>
@@ -48,44 +44,11 @@
 
 <style lang="less" scoped>
 .container {
-  padding-top: 70px;
-  background: url(../../assets/bg1.png) repeat;
+  margin: 150px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
-  .bg1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 200px;
-    left: 30px;
-    .avatar {
-      background-image: url(https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f606.svg);
-      background-size: cover;
-      height: 50px;
-      width: 50px;
-      border-radius: 5px;
-      transition: all 0.5s ease;
-      margin-bottom: 5px;
-    }
-    .comment {
-      width: 20px;
-      height: 0px;
-      overflow: hidden;
-      transition: all 0.5s ease-out;
-    }
-  }
-  .bg1:hover .comment {
-    width: 20px;
-    height: 300px;
-  }
-  .bg1:hover .avatar {
-    transform: scale(1.2);
-  }
 
   img {
     width: 100%;
@@ -103,35 +66,39 @@
   }
 
   .card {
-    width: 25%;
-    color: #000;
+    width: 40%;
     border-radius: 10px;
     height: 70vh;
-    margin: 40px 20px 60px;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 30px#f8f6f6;
+    margin: 0px 30px 50px;
+    box-shadow: 0px 0px 20px aqua;
     transition: all 0.5s;
     overflow: hidden;
     display: flex;
     flex: wrap;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
 
     .text-container {
+      h3 {
+        color: aqua;
+        position: absolute;
+        top: -150px;
+        left: 301px;
+        font-size: 30px;
+      }
       position: absolute;
       bottom: 5px;
       padding: 20px;
-      font-size: 14px;
       height: 60%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
     }
   }
-  .container div:nth-child(1) {
-    transform: rotatey(180deg);
-  }
+
   .card:hover {
-    box-shadow: 0px 0px 3px #f8f6f6;
+    transform: translateY(3px);
+    box-shadow: 0px 0px 3px aqua;
   }
 }
 </style>

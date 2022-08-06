@@ -32,16 +32,19 @@ window.onscroll = () => {
 
 <style lang="less" scoped>
 .navbar {
-  background-color: rgba(255, 255, 255, 0.1);
-  height: 50px;
+  background-color: rgba(0, 255, 255, 0.5);
+  height: 55px;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 200px;
   transition: 1s;
 
+  // box-shadow: 5px 0 10px aqua;
+
   .nav-left {
+    color: black;
     height: 100%;
     line-height: 100%;
     display: flex;
@@ -58,7 +61,7 @@ window.onscroll = () => {
       transition: all 0.5s;
     }
     .title {
-      font-size: 13px;
+      // font-size: 13px;
       transition: all 0.5s;
     }
   }
@@ -72,18 +75,27 @@ window.onscroll = () => {
 }
 .link-container {
   span {
+    color: black;
     display: inline-block;
     margin-right: 25px;
     transition: all 0.5s;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 1em;
+    font-weight: 700;
   }
   span:hover {
-    font-size: 14px;
+    font-size: 0.9em;
     color: #ccc;
   }
 }
 .navbar.active {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.8);
+  .nav-left,
+  span {
+    color: #fff;
+  }
+}
+.navbar:hover {
+  background-color: rgba(0, 255, 255, 0.8);
 }
 </style>

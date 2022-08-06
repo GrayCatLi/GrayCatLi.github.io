@@ -12,6 +12,11 @@ li {
 }
 
 body{
-  background-color: #000;
+  background-image: url(./assets/bg1.png);
   color: #fff;
+  font-size: 1.1em;
+}
+
+h2 {
+  color: aqua;
 }
