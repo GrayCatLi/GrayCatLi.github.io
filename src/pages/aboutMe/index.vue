@@ -2,8 +2,8 @@
   <div class="container">
     <div class="image-container1 card">
       <img src="../../assets/cat.jpg" class="img-cat" />
+      <h3>你好呀！👋</h3>
       <div class="text-container">
-        <h3>你好呀！👋</h3>
         <p>
           很高兴遇见你，也欢迎来到我的个人主页， 我叫李昊雨，
           有一只可爱调皮的猫和一位同样可爱有趣的漂亮女友。
@@ -77,15 +77,14 @@
     flex: wrap;
     position: relative;
     background-color: rgba(0, 0, 0, 0.5);
-
+    h3 {
+      color: aqua;
+      position: absolute;
+      top: 15%;
+      right: 3%;
+      font-size: 1.5em;
+    }
     .text-container {
-      h3 {
-        color: aqua;
-        position: absolute;
-        top: -150px;
-        left: 301px;
-        font-size: 30px;
-      }
       position: absolute;
       bottom: 5px;
       padding: 20px;
