@@ -3,11 +3,13 @@
     <h2>| 个人作品</h2>
     <h3>我擅长把想法变为现实，始终将用户体验摆在第一位</h3>
     <div class="card-container">
-      <div class="card" v-for="(item, idx) in data" :key="idx">
-        <div
-          class="img-container"
-          :style="`background-image:url(${item.imgUrl})`"
-        ></div>
+      <div
+        class="card"
+        v-for="(item, idx) in data"
+        :key="idx"
+        @click="go(item.workUrl)"
+      >
+        <img :src="item.imgUrl" alt="" class="img-container" />
         <h3 class="title">{{ item.title }}</h3>
         <p class="comment">{{ item.comment }}</p>
       </div>
@@ -20,25 +22,29 @@ import { reactive } from "@vue/reactivity";
 
 const data = reactive({
   echart: {
-    title: "echart",
-    imgUrl:
-      "https://www.leoku.top/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvue-color-avatar.7331d74f.png&w=2048&q=75",
+    title: "Echarts",
+    imgUrl: "https://w.wallhaven.cc/full/x8/wallhaven-x8rwzo.jpg",
     comment: "使用Echarts实现的数据可视化大屏",
+    workUrl: "https://echarts-iota.vercel.app/",
   },
   personalWebsite: {
-    title: "Personal-Website",
-    imgUrl:
-      "https://www.leoku.top/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvue-color-avatar.7331d74f.png&w=2048&q=75",
+    title: "Background-Manage-System",
+    imgUrl: "https://w.wallhaven.cc/full/rd/wallhaven-rd81d1.png",
     comment:
       "基于Vue3+ElementPlus重构的vue-element-admin项目，后台管理项目的通用解决方案",
+    workUrl: "https://github.com/GrayCatLi/background-manage-system",
   },
   components: {
     title: "Components",
-    imgUrl:
-      "https://www.leoku.top/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvue-color-avatar.7331d74f.png&w=2048&q=75",
+    imgUrl: "https://w.wallhaven.cc/full/3z/wallhaven-3zmr6y.jpg",
     comment: "使用HTML、CSS、JavaScript实现的一些有趣且炫酷的组件",
+    workUrl: "https://github.com/GrayCatLi/Components.git",
   },
 });
+
+const go = (url) => {
+  window.location.href = url;
+};
 </script>
 
 <style lang="less" scoped>
@@ -56,7 +62,7 @@ const data = reactive({
     flex-wrap: wrap;
     .card {
       box-shadow: 0 0 10px aqua;
-      width: 46%;
+      width: 48%;
       border-radius: 10px;
       overflow: hidden;
       margin-bottom: 50px;
@@ -88,9 +94,10 @@ const data = reactive({
       }
 
       .comment {
-        margin: 25px 15px 15px;
-        height: 80px;
-        line-height: 40px;
+        margin: 15px 15px 15px;
+        height: 60px;
+        line-height: 20px;
+        font-size: 0.9em;
       }
     }
     .card:hover {

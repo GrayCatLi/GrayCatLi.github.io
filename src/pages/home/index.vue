@@ -4,7 +4,7 @@
     <h3 class="comment">一名追逐创意的前端应用开发者</h3>
     <about-me class="about-me card"></about-me>
     <personal-works class="personal-works card"></personal-works>
-    <note class="note card"></note>
+    <!-- <note class="note card"></note> -->
     <contact class="contact card"></contact>
   </div>
 </template>
