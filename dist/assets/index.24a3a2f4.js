@@ -1,0 +1,1 @@
+import{_ as e,o as _,c as t}from"./index.647355a0.js";const c={};function n(o,s){return _(),t("div",null,"\u8FD9\u662Ftest\u9875\u9762")}const r=e(c,[["render",n],["__scopeId","data-v-10e53728"]]);export{r as default};
